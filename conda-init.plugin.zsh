@@ -3,7 +3,7 @@
 if [ -z ${CONDA_PREFIX+x} ]; then
 	echo "Set CONDA_PREFIX to YOUR_CONDA_ROOT_PATH";
 else
-	__conda_setup="$('$CONDA_PREFIX/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+	__conda_setup="$($CONDA_PREFIX/bin/conda 'shell.zsh' 'hook' 2>/dev/null)"
 	if [ $? -eq 0 ]; then
 		eval "$__conda_setup"
 	else
